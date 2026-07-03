@@ -5,7 +5,7 @@ URP post-processing packages for Unity 6. Two independent packages — use eithe
 | Package | What it is | Status |
 |---|---|---|
 | `com.seanzo.postprocess-player` | A reflection-driven player that animates any URP `VolumeComponent` from data-driven `EffectConfig` assets. Ships an importable sample scene. | Ready |
-| `com.seanzo.postprocess-effects` | A library of URP screen-space effects URP doesn't ship (painterly, stylized, retro, distortion), driven by a single renderer feature. | In development |
+| `com.seanzo.postprocess-effects` | A library of 17 URP screen-space effects URP doesn't ship (painterly, stylized, retro, distortion), driven by a single renderer feature. | Ready |
 
 ## Requirements
 
@@ -21,7 +21,7 @@ Window → Package Manager → **+** → **Add package from git URL**, then past
 https://github.com/theseanzo/seanzo-unity-packages.git?path=/com.seanzo.postprocess-player
 ```
 
-**Effect Library** (once released):
+**Effect Library:**
 ```
 https://github.com/theseanzo/seanzo-unity-packages.git?path=/com.seanzo.postprocess-effects
 ```
@@ -61,11 +61,11 @@ Package Manager → Effect Player → **Samples** → import **Basic-Playground*
 
 ## Using the Effect Library
 
-> **In development.** The package installs but its effects aren't populated yet. Use the Effect Player with built-in URP effects for now.
+17 effects with no stock URP equivalent — Kuwahara, Oil Paint, Watercolor, Dithering, Halftone, Pixelate, Scanlines, Static Noise, Tracking Distortion, Color Bleed, Wave, Glitch Block, Fog, Edge Detection, Letterbox, Border, Posterize. Each is a standard URP `VolumeComponent` rendered by one `ScriptableRendererFeature`, grouped in the **Add Override → SeanFX** menu.
 
-When released, the effects are standard URP `VolumeComponent`s rendered by one `ScriptableRendererFeature`. Intended usage:
-
-1. Add the renderer feature to your URP Renderer asset (Project Settings → Graphics → your Renderer → Add Renderer Feature).
+1. Add **Seanzo Post Process Feature** to your URP Renderer asset (select the Renderer → Add Renderer Feature).
 2. Ensure **compatibility mode is off** (the feature is RenderGraph-only; under compatibility mode it renders nothing).
 3. Add a Volume to the scene and override the effect you want.
-4. Drive it by hand, or animate it with the Effect Player exactly like any other `VolumeComponent`.
+4. Drive it by hand, from code, or animate it with the Effect Player exactly like any other `VolumeComponent`.
+
+Full setup, requirements, and code examples are in the package's [README](com.seanzo.postprocess-effects/README.md).

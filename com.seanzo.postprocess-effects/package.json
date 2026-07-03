@@ -17,12 +17,5 @@
   ],
   "author": {
     "name": "Sean Lynch"
-  },
-  "samples": [
-    {
-      "displayName": "Effects-Showcase",
-      "description": "A primitives scene with the renderer feature added and Volume overrides demonstrating the effect library.",
-      "path": "Samples~/EffectsShowcase"
-    }
-  ]
+  }
 }
