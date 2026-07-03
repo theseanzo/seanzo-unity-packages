@@ -11,8 +11,8 @@ Works standalone — these are plain Volume overrides you can set by hand or fro
 ### Painterly
 
 - **Kuwahara** — An edge-preserving smoothing filter that averages the most uniform region around each pixel, wiping out fine texture while keeping edges crisp for a painterly look. ([Wikipedia](https://en.wikipedia.org/wiki/Kuwahara_filter))
-- **Oil Paint** — A non-photorealistic style that turns the image into an oil-painting look by grouping pixels into stroke-like regions of dominant color. ([Wikipedia](https://en.wikipedia.org/wiki/Non-photorealistic_rendering))
-- **Watercolor** — A non-photorealistic style that mimics watercolor by simulating pigment diffusing and pooling across paper. ([Wikipedia](https://en.wikipedia.org/wiki/Non-photorealistic_rendering))
+- **Oil Paint** — Rebuilds the image as layered curved brush strokes aligned to image gradients, coarse strokes first then finer ones, for a thick oil-paint look. ([Hertzmann, SIGGRAPH '98](https://history.siggraph.org/learning/painterly-rendering-with-curved-brush-strokes-of-multiple-sizes-by-hertzmann/))
+- **Watercolor** — Abstracts the image into flat color regions, then filters them to fake pigment pooling, paper texture, and darkened edges like real wet watercolor. ([Bousseau et al., INRIA](https://maverick.inria.fr/Publications/2006/BKTS06/index.php))
 
 ### Retro
 
