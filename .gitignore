@@ -1,0 +1,8 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Stray temp files
+*.tmp
+
+# NOTE: never ignore *.meta — Unity packages require their meta/GUID files.

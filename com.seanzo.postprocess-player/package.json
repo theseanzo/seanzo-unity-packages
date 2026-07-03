@@ -1,0 +1,27 @@
+{
+  "name": "com.seanzo.postprocess-player",
+  "version": "0.1.0",
+  "displayName": "Post-Process-Effect-Player",
+  "description": "A reflection-driven player that animates any URP VolumeComponent from data-driven EffectConfig assets. Drive built-in URP effects or the Seanzo Post Processes pack with no per-effect code.",
+  "unity": "6000.0",
+  "dependencies": {
+    "com.unity.render-pipelines.universal": "17.3.0"
+  },
+  "keywords": [
+    "urp",
+    "post-processing",
+    "vfx",
+    "volume",
+    "effects"
+  ],
+  "author": {
+    "name": "Sean Lynch"
+  },
+  "samples": [
+    {
+      "displayName": "Basic-Playground",
+      "description": "A scene with EffectBank wired to number keys, playing example EffectConfig assets on built-in URP effects.",
+      "path": "Samples~/BasicPlayground"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "com.seanzo.postprocess-effects",
+  "version": "0.1.0",
+  "displayName": "Seanzo-Post-Processes",
+  "description": "A library of URP screen-space post-process effects that URP does not ship: painterly, stylized, retro, and distortion looks. Rendered through a single ScriptableRendererFeature and driven by the normal URP Volume stack. Requires URP 17.3+ with RenderGraph (compatibility mode off).",
+  "unity": "6000.0",
+  "dependencies": {
+    "com.unity.render-pipelines.universal": "17.3.0"
+  },
+  "keywords": [
+    "urp",
+    "post-processing",
+    "vfx",
+    "shaders",
+    "stylized",
+    "renderer-feature"
+  ],
+  "author": {
+    "name": "Sean Lynch"
+  },
+  "samples": [
+    {
+      "displayName": "Effects-Showcase",
+      "description": "A primitives scene with the renderer feature added and Volume overrides demonstrating the effect library.",
+      "path": "Samples~/EffectsShowcase"
+    }
+  ]
+}
