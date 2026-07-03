@@ -4,19 +4,47 @@ A library of URP screen-space post-process effects that URP does **not** ship �
 
 Works standalone — these are plain Volume overrides you can set by hand or from code. If the [Post Process Effect Player](https://github.com/theseanzo/seanzo-unity-packages) is also installed, it can animate any of them from data-driven `EffectConfig` assets.
 
-## What's in the box
+## Effects
 
-17 effects, grouped in the **Add Override → SeanFX** menu:
+17 effects with no stock URP equivalent, grouped in the **Add Override → SeanFX** menu. Each links to a reference on the underlying technique.
 
-| Category | Effects |
-|---|---|
-| Painterly | Kuwahara, Oil Paint, Watercolor |
-| Retro | Dithering, Halftone, Pixelate |
-| Analog | Scanlines, Static Noise, Tracking Distortion, Color Bleed |
-| Distortion | Wave, Glitch Block |
-| Depth | Fog, Edge Detection |
-| Framing | Letterbox, Border |
-| Color | Posterize |
+### Painterly
+
+- **Kuwahara** — An edge-preserving smoothing filter that averages the most uniform region around each pixel, wiping out fine texture while keeping edges crisp for a painterly look. ([Wikipedia](https://en.wikipedia.org/wiki/Kuwahara_filter))
+- **Oil Paint** — A non-photorealistic style that turns the image into an oil-painting look by grouping pixels into stroke-like regions of dominant color. ([Wikipedia](https://en.wikipedia.org/wiki/Non-photorealistic_rendering))
+- **Watercolor** — A non-photorealistic style that mimics watercolor by simulating pigment diffusing and pooling across paper. ([Wikipedia](https://en.wikipedia.org/wiki/Non-photorealistic_rendering))
+
+### Retro
+
+- **Dithering** — Tiles a small Bayer threshold matrix across the image, trading smooth gradients for a patterned mix of few colors and hiding banding with a retro feel. ([Wikipedia](https://en.wikipedia.org/wiki/Ordered_dithering))
+- **Halftone** — Reproduces continuous tone with a grid of dots that vary in size or spacing, imitating how printed images are made. ([Wikipedia](https://en.wikipedia.org/wiki/Halftone))
+- **Pixelate** — Displays the image at a markedly lower resolution so it breaks into large blocky mosaic squares. ([Wikipedia](https://en.wikipedia.org/wiki/Pixelization))
+
+### Analog
+
+- **Scanlines** — Draws evenly spaced dark horizontal lines to mimic the visible rows of a CRT television's raster scan. ([Wikipedia](https://en.wikipedia.org/wiki/Scan_line))
+- **Static Noise** — Overlays random flickering dots to recreate the "snow" an analog TV shows with no signal. ([Wikipedia](<https://en.wikipedia.org/wiki/Noise_(video)>))
+- **Tracking Distortion** — Recreates VHS tracking errors, where misaligned playback heads make horizontal bands of the picture warp, jitter, or break into static. ([Wikipedia](https://en.wikipedia.org/wiki/Video_tape_tracking))
+- **Color Bleed** — Smears color sideways past its edges to imitate the chroma-luma crosstalk and rainbow artifacts of analog composite video. ([Wikipedia](https://en.wikipedia.org/wiki/Dot_crawl))
+
+### Distortion
+
+- **Wave** — Offsets the screen's UV coordinates along a moving sine wave so the image ripples and wobbles like a reflection in water.
+- **Glitch Block** — Displaces rectangular blocks of the image to fake the corrupted-data, datamosh look of digital glitch art. ([Wikipedia](https://en.wikipedia.org/wiki/Glitch_art))
+
+### Depth
+
+- **Fog** — Blends distant pixels toward a fog color based on their depth, so far objects fade into haze and gain a sense of distance. ([Wikipedia](https://en.wikipedia.org/wiki/Distance_fog))
+- **Edge Detection** — Uses a Sobel gradient on color or depth to find sharp changes and draw outlines around shapes. ([Wikipedia](https://en.wikipedia.org/wiki/Sobel_operator))
+
+### Framing
+
+- **Letterbox** — Adds black bars above and below the image to reframe it into a wider cinematic aspect ratio. ([Wikipedia](<https://en.wikipedia.org/wiki/Letterboxing_(filming)>))
+- **Border** — Draws a solid inset frame of fixed thickness around the screen's edges.
+
+### Color
+
+- **Posterize** — Quantizes continuous tones down to a few discrete color levels, producing flat banded regions like a printed poster. ([Wikipedia](https://en.wikipedia.org/wiki/Posterization))
 
 ## Install
 
