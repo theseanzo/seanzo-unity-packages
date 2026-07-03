@@ -18,15 +18,15 @@ Window → Package Manager → **+** → **Add package from git URL**, then past
 
 **Effect Player:**
 ```
-https://github.com/<owner>/seanzo-unity-packages.git?path=/com.seanzo.postprocess-player
+https://github.com/theseanzo/seanzo-unity-packages.git?path=/com.seanzo.postprocess-player
 ```
 
 **Effect Library** (once released):
 ```
-https://github.com/<owner>/seanzo-unity-packages.git?path=/com.seanzo.postprocess-effects
+https://github.com/theseanzo/seanzo-unity-packages.git?path=/com.seanzo.postprocess-effects
 ```
 
-Replace `<owner>` with the GitHub account this repo lives under. Pin a version with a tag: `...git?path=/com.seanzo.postprocess-player#v0.1.0`.
+Pin a version with a tag: `...git?path=/com.seanzo.postprocess-player#v0.1.0`.
 
 ---
 
