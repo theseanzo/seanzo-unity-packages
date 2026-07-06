@@ -4,9 +4,6 @@ using UnityEngine;
 
 namespace Seanzo.LevelDesign.Editor
 {
-    // Bulk Blender Z-up correction. Selected kit prefabs get their wrapped children
-    // rotated in place; selected model assets get wrapped into kit prefabs with the
-    // correction applied (or their existing wrapper corrected).
     public static class KitAxisCorrector
     {
         private const string FixMenuPath = "Tools/Seanzo/Fix Blender Z-Up For Selection";
