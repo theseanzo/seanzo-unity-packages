@@ -1,16 +1,17 @@
 # Seanzo Unity Packages
 
-URP post-processing packages for Unity 6. Two independent packages — use either alone or together.
+Editor tooling and URP post-processing packages for Unity 6. Independent packages — use any alone or together.
 
 | Package | What it is | Status |
 |---|---|---|
 | `com.seanzo.postprocess-player` | A reflection-driven player that animates any URP `VolumeComponent` from data-driven `EffectConfig` assets. Ships an importable sample scene. | Ready |
 | `com.seanzo.postprocess-effects` | A library of 17 URP screen-space effects URP doesn't ship (painterly, stylized, retro, distortion), driven by a single renderer feature. | Ready |
+| `com.seanzo.grid-level-design` | A scene-view grid painting tool for modular kits: palette-driven placement, box/flood fills, rule tiles, and a pivot editor. | Ready |
 
 ## Requirements
 
 - Unity 6000.0+
-- URP 17.3+ (RenderGraph; for the effect library, compatibility mode must be off)
+- URP 17.3+ for the post-processing packages (RenderGraph; for the effect library, compatibility mode must be off). The grid tool has no dependencies.
 
 ## Install (Unity Package Manager)
 
@@ -24,6 +25,11 @@ https://github.com/theseanzo/seanzo-unity-packages.git?path=/com.seanzo.postproc
 **Effect Library:**
 ```
 https://github.com/theseanzo/seanzo-unity-packages.git?path=/com.seanzo.postprocess-effects
+```
+
+**Grid Level Design Tool:**
+```
+https://github.com/theseanzo/seanzo-unity-packages.git?path=/com.seanzo.grid-level-design
 ```
 
 Pin a version with a tag: `...git?path=/com.seanzo.postprocess-player#v0.1.0`.
@@ -69,3 +75,16 @@ Package Manager → Effect Player → **Samples** → import **Basic-Playground*
 4. Drive it by hand, from code, or animate it with the Effect Player exactly like any other `VolumeComponent`.
 
 Full setup, requirements, and code examples are in the package's [README](com.seanzo.postprocess-effects/README.md).
+
+---
+
+## Using the Grid Level Design Tool
+
+Paint modular kit prefabs onto a 3D grid in the Scene view. Floors and props place into cells; walls attach to cell faces.
+
+1. Add a **Grid Level** component to an empty GameObject and set **Cell Size** to your kit's module size.
+2. Create a palette (Create → **Seanzo/Level Design/Kit Palette**), open **Tools → Seanzo → Kit Palette**, and drag your kit prefabs in. Footprints and facing axes are detected automatically.
+3. Select the Grid Level and activate the **Grid Paint** tool: brush, box fill, flood fill, and erase across floor and wall planes, with pick, rotate, layers, and full Undo.
+4. Optional: drive a palette entry with a **Rule Kit Tile** so end/middle/corner variants swap automatically as you paint, and use the **Pivot Editor** to fix kit pieces whose pivots fight the grid.
+
+Setup, palette authoring, rule tiles, and the pivot editor are covered in the package's [documentation](com.seanzo.grid-level-design/Documentation~/index.md).
