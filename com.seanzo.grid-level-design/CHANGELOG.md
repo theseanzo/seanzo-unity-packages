@@ -2,7 +2,7 @@
 
 All notable changes to this package are documented here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
-## [0.1.0] - Unreleased
+## [0.1.0] - 2026-07-06
 
 ### Added
 - Grid Paint scene-view tool: brush, box fill, flood fill, and erase across floor (XZ) and wall (XY/YZ) paint planes, with placement previews, layers, and full Undo support.
